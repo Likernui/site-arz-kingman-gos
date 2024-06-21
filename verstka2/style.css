@@ -1,4 +1,10 @@
 /* Общие стили для элементов, убираем отступы и границы */
+@font-face{
+    font-family: "WixMadeforDisplay";
+    src: url('fonts/WixMadeforDisplay-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +14,7 @@
 body {
     display: flex;
     min-height: 100vh;
+    font-family: "WixMadeforDisplay", sans-serif;
 }
 
 /* Стили для контейнера aside */
@@ -19,6 +26,8 @@ body {
 
 /* Стили для кнопок */
 .btn {
+    border: none;
+    background: none;
     font-weight: 500;
     font-size: 16px;
     width: 100%;
@@ -27,7 +36,7 @@ body {
     align-items: center;
     text-decoration: none;
     color: black;
-    padding: 0 15px;
+    padding: 30px 15px;
     box-sizing: border-box;
     justify-content: flex-start; /* Выровнять содержимое кнопки по левому краю */
 }
@@ -40,6 +49,11 @@ body {
     background: #FFDE68;
     border-radius: 10px;
     transition: background 0.3s;
+}
+
+.btn.active {
+    background-color: #FFDE68;
+    border-radius: 10px;
 }
 
 /* Убираем центрирование элементов в списке */
@@ -62,21 +76,35 @@ li {
 }
 
 .text__GOS {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     margin-left: 5px;
     text-align: left; /* Выровнять текст по левому краю */
 }
-.main-content{
+.main-content {
     background: #D9D9D9;
+    flex-grow: 1; /* Убедитесь, что основное содержимое растягивается */
 }
-.main__wrapper{
+.main__wrapper {
+    width: 100%;
     max-width: 1530px;
-    margin: 0;
+    margin: 0 auto;
     padding: 15px;
+    box-sizing: border-box;
 }
 
-.intro-section h1 {
+section h1 {
     text-align: center;
 }
-.intro-sec
+
+section {
+    display: none;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    color: black; /* Убедитесь, что текст черный и виден на светлом фоне */
+}
+
+section.active {
+    display: block;
+}
