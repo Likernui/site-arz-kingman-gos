@@ -1,0 +1,82 @@
+/* Общие стили для элементов, убираем отступы и границы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Стили для контейнера aside */
+.aside__wrapper {
+    max-width: 310px;
+    margin: 0;
+    padding: 15px;
+}
+
+/* Стили для кнопок */
+.btn {
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 0 15px;
+    box-sizing: border-box;
+    justify-content: flex-start; /* Выровнять содержимое кнопки по левому краю */
+}
+
+.btn img {
+    margin-right: 34px; /* Отступ для иконки */
+}
+
+.btn:hover {
+    background: #FFDE68;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+/* Убираем центрирование элементов в списке */
+li {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+/* Выровнять текст внутри кнопки по левому краю */
+.text__nav {
+    font-size: 16px;
+}
+
+/* Стили для логотипа и названия */
+.gos__wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: flex-start; /* Выровнять содержимое по левому краю */
+}
+
+.text__GOS {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+    text-align: left; /* Выровнять текст по левому краю */
+}
+.main-content{
+    background: #D9D9D9;
+}
+.main__wrapper{
+    max-width: 1530px;
+    margin: 0;
+    padding: 15px;
+}
+
+.intro-section h1 {
+    text-align: center;
+}
+.intro-sec
