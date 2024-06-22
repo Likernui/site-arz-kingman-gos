@@ -11,6 +11,13 @@
     box-sizing: border-box;
 }
 
+
+@media screen and (min-width: 768px) {
+
+    
+
+}
+
 body {
     display: flex;
     min-height: 100vh;
@@ -107,4 +114,65 @@ section {
 
 section.active {
     display: block;
+}
+
+.nav__bottom {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Стиль для мобильных устройств */
+    body {
+        height: 100vh;
+        display: flex;
+        font-size: 16px;
+        justify-content: center;
+        background-color: #D9D9D9;
+    }
+
+    section h1 {
+        text-align: center;
+    }
+
+
+    aside {
+        display: none;
+    }
+
+    .nav__bottom {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #fff;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .nav__bottom button {
+        background: none;
+        border: none;
+        border-radius: 10px;
+        background: transparent;
+        padding: 10px;
+    }
+
+    button.active {
+        background-color: #FFDE68;
+        border-radius: 10px;
+    }
+
+    .nav__bottom button:hover {
+        cursor: pointer;
+        background: #FFDE68;
+        transition: 0.5s ease;
+    }
+
+    .nav__bottom button img {
+        width: 24px;
+    }
+    
+
 }
